@@ -2,10 +2,10 @@ Yii2-we-work
 ============
 Yii2 wechat work SDK
 
-[![Latest Stable Version](https://poser.pugx.org/dovechen/yii2-we-work/v/stable.png)](https://packagist.org/packages/dovechen/yii2-we-work)
-[![Total Downloads](https://poser.pugx.org/dovechen/yii2-we-work/downloads.png)](https://packagist.org/packages/dovechen/yii2-we-work)
-[![License](http://poser.pugx.org/dovechen/yii2-we-work/license)](https://packagist.org/packages/dovechen/yii2-we-work)
-[![PHP Version Require](http://poser.pugx.org/dovechen/yii2-we-work/require/php)](https://packagist.org/packages/dovechen/yii2-we-work)
+[![Latest Stable Version](https://poser.pugx.org/fastwhale/yii2-we-work/v/stable.png)](https://packagist.org/packages/fastwhale/yii2-we-work)
+[![Total Downloads](https://poser.pugx.org/fastwhale/yii2-we-work/downloads.png)](https://packagist.org/packages/fastwhale/yii2-we-work)
+[![License](http://poser.pugx.org/fastwhale/yii2-we-work/license)](https://packagist.org/packages/fastwhale/yii2-we-work)
+[![PHP Version Require](http://poser.pugx.org/fastwhale/yii2-we-work/require/php)](https://packagist.org/packages/fastwhale/yii2-we-work)
 
 Installation
 ------------
@@ -15,13 +15,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist dovechen/yii2-we-work "*"
+php composer.phar require --prefer-dist fastwhale/yii2-we-work "*"
 ```
 
 or add
 
 ```
-"dovechen/yii2-we-work": "*"
+"fastwhale/yii2-we-work": "*"
 ```
 
 to the require section of your `composer.json` file.
