@@ -1,12 +1,12 @@
 <?php
 
-	namespace dovechen\yii2\weWork\components;
+	namespace fastwhale\yii2\weWork\components;
 
 	require_once "utils/HttpUtils.php";
 
 	/**
 	 * Class HttpUtils
-	 * @package dovechen\yii2\weWork\components
+	 * @package fastwhale\yii2\weWork\components
 	 */
 	class HttpUtils extends \HttpUtils
 	{

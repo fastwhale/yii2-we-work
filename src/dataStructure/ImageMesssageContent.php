@@ -1,14 +1,14 @@
 <?php
 	/**
 	 * Create by PhpStorm
-	 * User: dovechen
+	 * User: fastwhale
 	 * Date: 2020/1/13
 	 * Time: 11:50
 	 */
 
-	namespace dovechen\yii2\weWork\src\dataStructure;
+	namespace fastwhale\yii2\weWork\src\dataStructure;
 
-	use dovechen\yii2\weWork\components\Utils;
+	use fastwhale\yii2\weWork\components\Utils;
 
 	/**
 	 * Class ImageMesssageContent
@@ -16,7 +16,7 @@
 	 * @property string $msgtype  消息类型，此时固定为：image
 	 * @property string $media_id 图片媒体文件id，可以调用上传临时素材接口获取
 	 *
-	 * @package dovechen\yii2\weWork\src\dataStructure
+	 * @package fastwhale\yii2\weWork\src\dataStructure
 	 */
 	class ImageMesssageContent
 	{

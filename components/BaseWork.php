@@ -1,6 +1,6 @@
 <?php
 
-	namespace dovechen\yii2\weWork\components;
+	namespace fastwhale\yii2\weWork\components;
 
 	require_once "errorInc/error.inc.php";
 

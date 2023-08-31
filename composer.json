@@ -1,13 +1,13 @@
 {
-    "name": "dovechen/yii2-we-work",
+    "name": "fastwhale/yii2-we-work",
     "description": "Yii2 wechat work SDK",
     "type": "yii2-extension",
     "keywords": ["yii2","extension","we","work","wechat","weWork","企业微信"],
     "license": "MIT",
     "authors": [
         {
-            "name": "Dove Chen",
-            "email": "pacifist888@163.com"
+            "name": "Fast Whale",
+            "email": "op@mail.pigcms.com"
         }
     ],
     "require": {
@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "dovechen\\yii2\\weWork\\": ""
+            "fastwhale\\yii2\\weWork\\": ""
         }
     }
 }

@@ -1,8 +1,8 @@
 <?php
 
-	namespace dovechen\yii2\weWork\src\dataStructure;
+	namespace fastwhale\yii2\weWork\src\dataStructure;
 
-	use dovechen\yii2\weWork\components\Utils;
+	use fastwhale\yii2\weWork\components\Utils;
 
 	/**
 	 * Class ExternalContactGroupChat
@@ -14,7 +14,7 @@
 	 * @property string $notice              群公告
 	 * @property array  $members             群成员列表
 	 *
-	 * @package dovechen\yii2\weWork\src\dataStructure
+	 * @package fastwhale\yii2\weWork\src\dataStructure
 	 */
 	class WorkUserGroupChat
 	{

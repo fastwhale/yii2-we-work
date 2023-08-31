@@ -1,8 +1,8 @@
 <?php
 
-	namespace dovechen\yii2\weWork\src\dataStructure;
+	namespace fastwhale\yii2\weWork\src\dataStructure;
 
-	use dovechen\yii2\weWork\components\Utils;
+	use fastwhale\yii2\weWork\components\Utils;
 
 	/**
 	 * Class ExternalContactFollowUserTag
@@ -11,7 +11,7 @@
 	 * @property string $tag_name   该成员添加此外部联系人所打标签名称
 	 * @property int    $type       该成员添加此外部联系人所打标签类型, 1-企业设置, 2-用户自定义
 	 *
-	 * @package dovechen\yii2\weWork\src\dataStructure
+	 * @package fastwhale\yii2\weWork\src\dataStructure
 	 */
 	class ExternalContactFollowUserTag
 	{

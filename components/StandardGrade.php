@@ -1,10 +1,10 @@
 <?php
 
-	namespace dovechen\yii2\weWork\components;
+	namespace fastwhale\yii2\weWork\components;
 
 	/**
 	 * Class StandardGrade
-	 * @package dovechen\yii2\weWork\components
+	 * @package fastwhale\yii2\weWork\components
 	 */
 	class StandardGrade
 	{

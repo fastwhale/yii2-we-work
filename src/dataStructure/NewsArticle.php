@@ -1,14 +1,14 @@
 <?php
 	/**
 	 * Create by PhpStorm
-	 * User: dovechen
+	 * User: fastwhale
 	 * Date: 2020/1/11
 	 * Time: 15:05
 	 */
 
-	namespace dovechen\yii2\weWork\src\dataStructure;
+	namespace fastwhale\yii2\weWork\src\dataStructure;
 
-	use dovechen\yii2\weWork\components\Utils;
+	use fastwhale\yii2\weWork\components\Utils;
 
 	/**
 	 * Class NewsArticle
@@ -18,7 +18,7 @@
 	 * @property string $url         点击后跳转的链接。
 	 * @property string $picurl      图文消息的图片链接，支持JPG、PNG格式，较好的效果为大图 1068*455，小图150*150。
 	 *
-	 * @package dovechen\yii2\weWork\src\dataStructure
+	 * @package fastwhale\yii2\weWork\src\dataStructure
 	 */
 	class NewsArticle
 	{

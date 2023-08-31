@@ -1,10 +1,10 @@
 <?php
 
-	namespace dovechen\yii2\weWork\components;
+	namespace fastwhale\yii2\weWork\components;
 
 	/**
 	 * Class errorCode
-	 * @package dovechen\yii2\weWork\components
+	 * @package fastwhale\yii2\weWork\components
 	 */
 	class errorCode
 	{

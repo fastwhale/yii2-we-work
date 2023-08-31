@@ -1,15 +1,15 @@
 <?php
 
-	namespace dovechen\yii2\weWork\src\dataStructure;
+	namespace fastwhale\yii2\weWork\src\dataStructure;
 
-	use dovechen\yii2\weWork\components\Utils;
+	use fastwhale\yii2\weWork\components\Utils;
 
 	/**
 	 * Class AttrItemText
 	 *
 	 * @property string $value 文本属性内容,长度限制12个UTF8字符
 	 *
-	 * @package dovechen\yii2\weWork\src\dataStructure
+	 * @package fastwhale\yii2\weWork\src\dataStructure
 	 */
 	class AttrItemText
 	{

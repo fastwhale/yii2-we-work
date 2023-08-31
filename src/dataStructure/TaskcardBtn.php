@@ -1,14 +1,14 @@
 <?php
 	/**
 	 * Create by PhpStorm
-	 * User: dovechen
+	 * User: fastwhale
 	 * Date: 2020/1/11
 	 * Time: 16:25
 	 */
 
-	namespace dovechen\yii2\weWork\src\dataStructure;
+	namespace fastwhale\yii2\weWork\src\dataStructure;
 
-	use dovechen\yii2\weWork\components\Utils;
+	use fastwhale\yii2\weWork\components\Utils;
 
 	/**
 	 * Class TaskcardBtn
@@ -19,7 +19,7 @@
 	 * @property string $color        按钮字体颜色，可选“red”或者“blue”,默认为“blue”
 	 * @property string $is_bold      按钮字体是否加粗，默认false
 	 *
-	 * @package dovechen\yii2\weWork\src\dataStructure
+	 * @package fastwhale\yii2\weWork\src\dataStructure
 	 */
 	class TaskcardBtn
 	{

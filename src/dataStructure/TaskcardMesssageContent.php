@@ -1,14 +1,14 @@
 <?php
 	/**
 	 * Create by PhpStorm
-	 * User: dovechen
+	 * User: fastwhale
 	 * Date: 2020/1/13
 	 * Time: 11:24
 	 */
 
-	namespace dovechen\yii2\weWork\src\dataStructure;
+	namespace fastwhale\yii2\weWork\src\dataStructure;
 
-	use dovechen\yii2\weWork\components\Utils;
+	use fastwhale\yii2\weWork\components\Utils;
 
 	/**
 	 * Class TaskcardMesssageContent
@@ -19,7 +19,7 @@
 	 * @property string $url                 点击后跳转的链接。最长2048字节，请确保包含了协议头(http/https)
 	 * @property string $task_id             任务id，同一个应用发送的任务卡片消息的任务id不能重复，只能由数字、字母和“_-@.”组成，最长支持128字节
 	 * @property array  $btn                 按钮列表，按钮个数为为1~2个。
-	 * @package dovechen\yii2\weWork\src\dataStructure
+	 * @package fastwhale\yii2\weWork\src\dataStructure
 	 */
 	class TaskcardMesssageContent
 	{

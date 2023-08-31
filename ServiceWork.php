@@ -1,10 +1,10 @@
 <?php
 
-	namespace dovechen\yii2\weWork;
+	namespace fastwhale\yii2\weWork;
 
-	use dovechen\yii2\weWork\components\Utils;
-	use dovechen\yii2\weWork\src\dataStructure\UserDetailByUserTicket;
-	use dovechen\yii2\weWork\src\dataStructure\UserInfoByCode;
+	use fastwhale\yii2\weWork\components\Utils;
+	use fastwhale\yii2\weWork\src\dataStructure\UserDetailByUserTicket;
+	use fastwhale\yii2\weWork\src\dataStructure\UserInfoByCode;
 	use yii\base\InvalidParamException;
 
 	class ServiceWork extends Work

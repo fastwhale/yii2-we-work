@@ -1,8 +1,8 @@
 <?php
 
-	namespace dovechen\yii2\weWork\src\dataStructure;
+	namespace fastwhale\yii2\weWork\src\dataStructure;
 
-	use dovechen\yii2\weWork\components\Utils;
+	use fastwhale\yii2\weWork\components\Utils;
 
 	/**
 	 * Class ExternalContactTagGroup
@@ -14,7 +14,7 @@
 	 * @property int    $deleted        标签组是否已经被删除，只在指定tag_id进行查询时返回
 	 * @property array  $tag            标签组内的标签列表
 	 *
-	 * @package dovechen\yii2\weWork\src\dataStructure
+	 * @package fastwhale\yii2\weWork\src\dataStructure
 	 */
 	class ExternalContactTagGroup
 	{

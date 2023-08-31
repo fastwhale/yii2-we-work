@@ -1,12 +1,12 @@
 <?php
 
-	namespace dovechen\yii2\weWork\components;
+	namespace fastwhale\yii2\weWork\components;
 
 	use yii\base\Object;
 
 	/**
 	 * Class WorkComponent
-	 * @package dovechen\yii2\weWork\components
+	 * @package fastwhale\yii2\weWork\components
 	 */
 	class WorkComponent extends Object
 	{

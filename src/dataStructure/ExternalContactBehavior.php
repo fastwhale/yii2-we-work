@@ -1,8 +1,8 @@
 <?php
 
-	namespace dovechen\yii2\weWork\src\dataStructure;
+	namespace fastwhale\yii2\weWork\src\dataStructure;
 
-	use dovechen\yii2\weWork\components\Utils;
+	use fastwhale\yii2\weWork\components\Utils;
 
 	/**
 	 * Class ExternalContactBehavior
@@ -16,7 +16,7 @@
 	 * @property int   $avg_reply_time           平均首次回复时长，单位为分钟，即客户主动发起聊天后，成员在一个自然日内首次回复的时长间隔为首次回复时长，所有聊天的首次回复总时长/已回复的聊天总数即为平均首次回复时长，不包括群聊，仅在确有回复时返回。
 	 * @property int   $negative_feedback_cnt    删除/拉黑成员的客户数，即将成员删除或加入黑名单的客户数。
 	 *
-	 * @package dovechen\yii2\weWork\src\dataStructure
+	 * @package fastwhale\yii2\weWork\src\dataStructure
 	 */
 	class ExternalContactBehavior
 	{

@@ -1,8 +1,8 @@
 <?php
 
-	namespace dovechen\yii2\weWork\src\dataStructure;
+	namespace fastwhale\yii2\weWork\src\dataStructure;
 
-	use dovechen\yii2\weWork\components\Utils;
+	use fastwhale\yii2\weWork\components\Utils;
 
 	/**
 	 * Class ExternalContactRemark
@@ -15,7 +15,7 @@
 	 * @property array  $remark_mobiles     此用户对外部联系人备注的手机号
 	 * @property string $remark_pic_mediaid 备注图片的mediaid，
 	 *
-	 * @package dovechen\yii2\weWork\src\dataStructure
+	 * @package fastwhale\yii2\weWork\src\dataStructure
 	 */
 	class ExternalContactRemark
 	{

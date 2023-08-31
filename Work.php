@@ -1,33 +1,33 @@
 <?php
 
-	namespace dovechen\yii2\weWork;
+	namespace fastwhale\yii2\weWork;
 
 	require_once "components/errorInc/error.inc.php";
 
-	use dovechen\yii2\weWork\components\BaseWork;
-	use dovechen\yii2\weWork\src\dataStructure\Agent;
-	use dovechen\yii2\weWork\src\dataStructure\Batch;
-	use dovechen\yii2\weWork\src\dataStructure\BatchJobArgs;
-	use dovechen\yii2\weWork\src\dataStructure\Department;
-	use dovechen\yii2\weWork\src\dataStructure\ExternalContact;
-	use dovechen\yii2\weWork\src\dataStructure\ExternalContactBatchGetByUser;
-	use dovechen\yii2\weWork\src\dataStructure\ExternalContactBehavior;
-	use dovechen\yii2\weWork\src\dataStructure\ExternalContactGroupChat;
-	use dovechen\yii2\weWork\src\dataStructure\ExternalContactMsgTemplate;
-	use dovechen\yii2\weWork\src\dataStructure\ExternalContactRemark;
-	use dovechen\yii2\weWork\src\dataStructure\ExternalContactTag;
-	use dovechen\yii2\weWork\src\dataStructure\ExternalContactTagGroup;
-	use dovechen\yii2\weWork\src\dataStructure\ExternalContactUnAssignUser;
-	use dovechen\yii2\weWork\src\dataStructure\ExternalContactWay;
-	use dovechen\yii2\weWork\src\dataStructure\LinkedcorpMessage;
-	use dovechen\yii2\weWork\src\dataStructure\Message;
-	use dovechen\yii2\weWork\src\dataStructure\MsgAuditCheckAgree;
-	use dovechen\yii2\weWork\src\dataStructure\Tag;
-	use dovechen\yii2\weWork\src\dataStructure\User;
-	use dovechen\yii2\weWork\src\dataStructure\UserDetailByUserTicket;
-	use dovechen\yii2\weWork\src\dataStructure\UserInfoByCode;
-	use dovechen\yii2\weWork\components\HttpUtils;
-	use dovechen\yii2\weWork\components\Utils;
+	use fastwhale\yii2\weWork\components\BaseWork;
+	use fastwhale\yii2\weWork\src\dataStructure\Agent;
+	use fastwhale\yii2\weWork\src\dataStructure\Batch;
+	use fastwhale\yii2\weWork\src\dataStructure\BatchJobArgs;
+	use fastwhale\yii2\weWork\src\dataStructure\Department;
+	use fastwhale\yii2\weWork\src\dataStructure\ExternalContact;
+	use fastwhale\yii2\weWork\src\dataStructure\ExternalContactBatchGetByUser;
+	use fastwhale\yii2\weWork\src\dataStructure\ExternalContactBehavior;
+	use fastwhale\yii2\weWork\src\dataStructure\ExternalContactGroupChat;
+	use fastwhale\yii2\weWork\src\dataStructure\ExternalContactMsgTemplate;
+	use fastwhale\yii2\weWork\src\dataStructure\ExternalContactRemark;
+	use fastwhale\yii2\weWork\src\dataStructure\ExternalContactTag;
+	use fastwhale\yii2\weWork\src\dataStructure\ExternalContactTagGroup;
+	use fastwhale\yii2\weWork\src\dataStructure\ExternalContactUnAssignUser;
+	use fastwhale\yii2\weWork\src\dataStructure\ExternalContactWay;
+	use fastwhale\yii2\weWork\src\dataStructure\LinkedcorpMessage;
+	use fastwhale\yii2\weWork\src\dataStructure\Message;
+	use fastwhale\yii2\weWork\src\dataStructure\MsgAuditCheckAgree;
+	use fastwhale\yii2\weWork\src\dataStructure\Tag;
+	use fastwhale\yii2\weWork\src\dataStructure\User;
+	use fastwhale\yii2\weWork\src\dataStructure\UserDetailByUserTicket;
+	use fastwhale\yii2\weWork\src\dataStructure\UserInfoByCode;
+	use fastwhale\yii2\weWork\components\HttpUtils;
+	use fastwhale\yii2\weWork\components\Utils;
 	use yii\base\Event;
 	use yii\base\InvalidParamException;
 
@@ -1474,7 +1474,7 @@
 		/* 微信客服 */
 		/**
 		 * 添加客服帐号
-		 * File: vendor/dovechen/yii2-we-work/Work.php
+		 * File: vendor/fastwhale/yii2-we-work/Work.php
 		 * Class: Work
 		 * Function: kfAccountAdd
 		 *
@@ -1503,7 +1503,7 @@
 
 		/**
 		 * 删除客服帐号
-		 * File: vendor/dovechen/yii2-we-work/Work.php
+		 * File: vendor/fastwhale/yii2-we-work/Work.php
 		 * Class: Work
 		 * Function: kfAccountDel
 		 *
@@ -1529,7 +1529,7 @@
 
 		/**
 		 * 修改客服账号
-		 * File: vendor/dovechen/yii2-we-work/Work.php
+		 * File: vendor/fastwhale/yii2-we-work/Work.php
 		 * Class: Work
 		 * Function: kfAccountUpdate
 		 *
@@ -1565,7 +1565,7 @@
 
 		/**
 		 * 获取客服账号列表
-		 * File: vendor/dovechen/yii2-we-work/Work.php
+		 * File: vendor/fastwhale/yii2-we-work/Work.php
 		 * Class: Work
 		 * Function: kfAccountList
 		 *
@@ -1583,7 +1583,7 @@
 
 		/**
 		 * 获取客服帐号链接
-		 * File: vendor/dovechen/yii2-we-work/Work.php
+		 * File: vendor/fastwhale/yii2-we-work/Work.php
 		 * Class: Work
 		 * Function: kfAddContactWay
 		 *
@@ -1614,7 +1614,7 @@
 
 		/**
 		 * 添加接待人员
-		 * File: vendor/dovechen/yii2-we-work/Work.php
+		 * File: vendor/fastwhale/yii2-we-work/Work.php
 		 * Class: Work
 		 * Function: kfServicerAdd
 		 *
@@ -1666,7 +1666,7 @@
 
 		/**
 		 * 删除接待人员
-		 * File: vendor/dovechen/yii2-we-work/Work.php
+		 * File: vendor/fastwhale/yii2-we-work/Work.php
 		 * Class: Work
 		 * Function: kfServicerDel
 		 *
@@ -1715,7 +1715,7 @@
 
 		/**
 		 * 获取接待人员列表
-		 * File: vendor/dovechen/yii2-we-work/Work.php
+		 * File: vendor/fastwhale/yii2-we-work/Work.php
 		 * Class: Work
 		 * Function: kfServicerList
 		 *
@@ -1739,7 +1739,7 @@
 		}
 
 		/**
-		 * File: vendor/dovechen/yii2-we-work/Work.php
+		 * File: vendor/fastwhale/yii2-we-work/Work.php
 		 * Class: Work
 		 * Function: kfServiceStateGet
 		 *
@@ -1768,7 +1768,7 @@
 
 		/**
 		 * 变更会话状态
-		 * File: vendor/dovechen/yii2-we-work/Work.php
+		 * File: vendor/fastwhale/yii2-we-work/Work.php
 		 * Class: Work
 		 * Function: kfServiceStateTrans
 		 *
@@ -1807,7 +1807,7 @@
 
 		/**
 		 * 获取消息
-		 * File: vendor/dovechen/yii2-we-work/Work.php
+		 * File: vendor/fastwhale/yii2-we-work/Work.php
 		 * Class: Work
 		 * Function: kfSyncMsg
 		 *
@@ -1841,7 +1841,7 @@
 
 		/**
 		 * 发送消息
-		 * File: vendor/dovechen/yii2-we-work/Work.php
+		 * File: vendor/fastwhale/yii2-we-work/Work.php
 		 * Class: Work
 		 * Function: kfSendMsg
 		 *
@@ -1881,7 +1881,7 @@
 
 		/**
 		 * 客户基本信息获取
-		 * File: vendor/dovechen/yii2-we-work/Work.php
+		 * File: vendor/fastwhale/yii2-we-work/Work.php
 		 * Class: Work
 		 * Function: kfCustomerBatchget
 		 *
@@ -1907,7 +1907,7 @@
 
 		/**
 		 * 获取配置的专员与客户群
-		 * File: vendor/dovechen/yii2-we-work/Work.php
+		 * File: vendor/fastwhale/yii2-we-work/Work.php
 		 * Class: Work
 		 * Function: kfCustomerGetUpgradeServiceConfig
 		 *
@@ -1925,7 +1925,7 @@
 
 		/**
 		 * 为客户升级为专员
-		 * File: vendor/dovechen/yii2-we-work/Work.php
+		 * File: vendor/fastwhale/yii2-we-work/Work.php
 		 * Class: Work
 		 * Function: kfCustomerUpgradeServiceForMember
 		 *
@@ -1963,7 +1963,7 @@
 
 		/**
 		 * 为客户升级为客户群服务
-		 * File: vendor/dovechen/yii2-we-work/Work.php
+		 * File: vendor/fastwhale/yii2-we-work/Work.php
 		 * Class: Work
 		 * Function: kfCustomerUpgradeServiceForChat
 		 *
@@ -2001,7 +2001,7 @@
 
 		/**
 		 * 为客户取消推荐
-		 * File: vendor/dovechen/yii2-we-work/Work.php
+		 * File: vendor/fastwhale/yii2-we-work/Work.php
 		 * Class: Work
 		 * Function: kfCustomerCancelUpgradeService
 		 *
@@ -2030,7 +2030,7 @@
 
 		/**
 		 * 将代开发应用获取的corpid转换为第三方应用获取的corpid
-		 * File: vendor/dovechen/yii2-we-work/Work.php
+		 * File: vendor/fastwhale/yii2-we-work/Work.php
 		 * Class: Work
 		 * Function: toOpenCorpid
 		 *
@@ -2054,7 +2054,7 @@
 
 		/**
 		 * 将代开发应用获取的userid转换为第三方应用获取的userid
-		 * File: vendor/dovechen/yii2-we-work/Work.php
+		 * File: vendor/fastwhale/yii2-we-work/Work.php
 		 * Class: Work
 		 * Function: useridToOpenuserid
 		 *
@@ -2078,7 +2078,7 @@
 
 		/**
 		 * 将代开发自建应用获取到的external_userid转换为服务商第三方应用的external_userid。
-		 * File: vendor/dovechen/yii2-we-work/Work.php
+		 * File: vendor/fastwhale/yii2-we-work/Work.php
 		 * Class: Work
 		 * Function: useridToOpenuserid
 		 *
@@ -2102,7 +2102,7 @@
 
 		/**
 		 * 批量转换external_userid
-		 * File: vendor/dovechen/yii2-we-work/Work.php
+		 * File: vendor/fastwhale/yii2-we-work/Work.php
 		 * Class: Work
 		 * Function: getNewExternalUserid
 		 *

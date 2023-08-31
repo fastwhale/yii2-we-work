@@ -1,8 +1,8 @@
 <?php
 
-	namespace dovechen\yii2\weWork\src\dataStructure;
+	namespace fastwhale\yii2\weWork\src\dataStructure;
 
-	use dovechen\yii2\weWork\components\Utils;
+	use fastwhale\yii2\weWork\components\Utils;
 
 	/**
 	 * Class AttrItem
@@ -13,7 +13,7 @@
 	 * @property string $web         网页类型的属性，url和title字段要么同时为空表示清除该属性，要么同时不为空 type为1时必填
 	 * @property string $miniprogram 小程序类型的属性，appid和title字段要么同时为空表示清除改属性，要么同时不为空 type为2时必填
 	 *
-	 * @package dovechen\yii2\weWork\src\dataStructure
+	 * @package fastwhale\yii2\weWork\src\dataStructure
 	 */
 	class AttrItem
 	{

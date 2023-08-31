@@ -1,14 +1,14 @@
 <?php
 	/**
 	 * Create by PhpStorm
-	 * User: dovechen
+	 * User: fastwhale
 	 * Date: 2020/1/11
 	 * Time: 15:37
 	 */
 
-	namespace dovechen\yii2\weWork\src\dataStructure;
+	namespace fastwhale\yii2\weWork\src\dataStructure;
 
-	use dovechen\yii2\weWork\components\Utils;
+	use fastwhale\yii2\weWork\components\Utils;
 
 	/**
 	 * Class MiniprogramNoticeContentItem
@@ -16,7 +16,7 @@
 	 * @property string $key   长度10个汉字以内
 	 * @property string $value 长度30个汉字以内
 	 *
-	 * @package dovechen\yii2\weWork\src\dataStructure
+	 * @package fastwhale\yii2\weWork\src\dataStructure
 	 */
 	class MiniprogramNoticeContentItem
 	{

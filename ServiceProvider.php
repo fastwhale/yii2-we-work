@@ -1,11 +1,11 @@
 <?php
 
-	namespace dovechen\yii2\weWork;
+	namespace fastwhale\yii2\weWork;
 
 	require_once "components/errorInc/error.inc.php";
 
-	use dovechen\yii2\weWork\components\BaseWork;
-	use dovechen\yii2\weWork\components\Utils;
+	use fastwhale\yii2\weWork\components\BaseWork;
+	use fastwhale\yii2\weWork\components\Utils;
 	use yii\base\InvalidParamException;
 
 	class ServiceProvider extends BaseWork

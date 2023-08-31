@@ -1,8 +1,8 @@
 <?php
 
-	namespace dovechen\yii2\weWork\src\dataStructure;
+	namespace fastwhale\yii2\weWork\src\dataStructure;
 
-	use dovechen\yii2\weWork\components\Utils;
+	use fastwhale\yii2\weWork\components\Utils;
 
 	/**
 	 * Class ExternalContactBatchGetByUser
@@ -11,7 +11,7 @@
 	 * @property string  $cursor             用于分页查询的游标，字符串类型，由上一次调用返回，首次调用可不填
 	 * @property integer $limit              返回的最大记录数，整型，最大值100，默认值50，超过最大值时取最大值
 	 *
-	 * @package dovechen\yii2\weWork\src\dataStructure
+	 * @package fastwhale\yii2\weWork\src\dataStructure
 	 */
 	class ExternalContactBatchGetByUser
 	{

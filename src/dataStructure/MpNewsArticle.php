@@ -1,14 +1,14 @@
 <?php
 	/**
 	 * Create by PhpStorm
-	 * User: dovechen
+	 * User: fastwhale
 	 * Date: 2020/1/9
 	 * Time: 15:18
 	 */
 
-	namespace dovechen\yii2\weWork\src\dataStructure;
+	namespace fastwhale\yii2\weWork\src\dataStructure;
 
-	use dovechen\yii2\weWork\components\Utils;
+	use fastwhale\yii2\weWork\components\Utils;
 
 	/**
 	 * Class MpNewsArticle
@@ -20,7 +20,7 @@
 	 * @property string $content            图文消息的内容，支持html标签，不超过666 K个字节（支持id转译）
 	 * @property string $digest             图文消息的描述，不超过512个字节，超过会自动截断（支持id转译）
 	 *
-	 * @package dovechen\yii2\weWork\src\dataStructure
+	 * @package fastwhale\yii2\weWork\src\dataStructure
 	 */
 	class MpNewsArticle
 	{

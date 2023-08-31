@@ -1,14 +1,14 @@
 <?php
 	/**
 	 * Create by PhpStorm
-	 * User: dovechen
+	 * User: fastwhale
 	 * Date: 2020/1/11
 	 * Time: 15:57
 	 */
 
-	namespace dovechen\yii2\weWork\src\dataStructure;
+	namespace fastwhale\yii2\weWork\src\dataStructure;
 
-	use dovechen\yii2\weWork\components\Utils;
+	use fastwhale\yii2\weWork\components\Utils;
 
 	/**
 	 * Class MiniprogramNoticeMessageContent
@@ -21,7 +21,7 @@
 	 * @property boolean $emphasis_first_item 是否放大第一个content_item
 	 * @property string  $content_item        消息内容键值对，最多允许10个item
 	 *
-	 * @package dovechen\yii2\weWork\src\dataStructure
+	 * @package fastwhale\yii2\weWork\src\dataStructure
 	 */
 	class MiniprogramNoticeMessageContent
 	{

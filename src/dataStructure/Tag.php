@@ -1,10 +1,10 @@
 <?php
 
-	namespace dovechen\yii2\weWork\src\dataStructure;
+	namespace fastwhale\yii2\weWork\src\dataStructure;
 
 	include_once __DIR__ . "/../../components/errorInc/error.inc.php";
 
-	use dovechen\yii2\weWork\components\Utils;
+	use fastwhale\yii2\weWork\components\Utils;
 
 	/**
 	 * Class Tags
@@ -14,7 +14,7 @@
 	 * @property array  $userlist   标签中包含的成员列表
 	 * @property array  $partylist  标签中包含的部门id列表
 	 *
-	 * @package dovechen\yii2\weWork\src\dataStructure
+	 * @package fastwhale\yii2\weWork\src\dataStructure
 	 */
 	class Tag
 	{

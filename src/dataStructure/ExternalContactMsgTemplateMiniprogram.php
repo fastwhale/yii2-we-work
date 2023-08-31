@@ -1,8 +1,8 @@
 <?php
 
-	namespace dovechen\yii2\weWork\src\dataStructure;
+	namespace fastwhale\yii2\weWork\src\dataStructure;
 
-	use dovechen\yii2\weWork\components\Utils;
+	use fastwhale\yii2\weWork\components\Utils;
 
 	/**
 	 * Class ExternalContactMsgTemplateMiniprogram
@@ -12,7 +12,7 @@
 	 * @property string $appid          小程序appid，必须是关联到企业的小程序应用
 	 * @property string $page           小程序page路径
 	 *
-	 * @package dovechen\yii2\weWork\src\dataStructure
+	 * @package fastwhale\yii2\weWork\src\dataStructure
 	 */
 	class ExternalContactMsgTemplateMiniprogram
 	{

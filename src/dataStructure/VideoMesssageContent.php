@@ -1,14 +1,14 @@
 <?php
 	/**
 	 * Create by PhpStorm
-	 * User: dovechen
+	 * User: fastwhale
 	 * Date: 2020/1/13
 	 * Time: 11:50
 	 */
 
-	namespace dovechen\yii2\weWork\src\dataStructure;
+	namespace fastwhale\yii2\weWork\src\dataStructure;
 
-	use dovechen\yii2\weWork\components\Utils;
+	use fastwhale\yii2\weWork\components\Utils;
 
 	/**
 	 * Class VideoMesssageContent
@@ -18,7 +18,7 @@
 	 * @property string $title       视频消息的标题，不超过128个字节，超过会自动截断
 	 * @property string $description 视频消息的描述，不超过512个字节，超过会自动截断
 	 *
-	 * @package dovechen\yii2\weWork\src\dataStructure
+	 * @package fastwhale\yii2\weWork\src\dataStructure
 	 */
 	class VideoMesssageContent
 	{

@@ -1,14 +1,14 @@
 <?php
 	/**
 	 * Create by PhpStorm
-	 * User: dovechen
+	 * User: fastwhale
 	 * Date: 2020/5/28
 	 * Time: 09:52
 	 */
 
-	namespace dovechen\yii2\weWork\src\dataStructure;
+	namespace fastwhale\yii2\weWork\src\dataStructure;
 
-	use dovechen\yii2\weWork\components\Utils;
+	use fastwhale\yii2\weWork\components\Utils;
 	use SebastianBergmann\CodeCoverage\Util;
 
 	/**
@@ -17,7 +17,7 @@
 	 * @property array  info   待查询的会话信息，数组
 	 * @property string roomid 待查询的roomid
 	 *
-	 * @package dovechen\yii2\weWork\src\dataStructure
+	 * @package fastwhale\yii2\weWork\src\dataStructure
 	 */
 	class MsgAuditCheckAgree
 	{

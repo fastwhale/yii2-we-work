@@ -1,8 +1,8 @@
 <?php
 
-	namespace dovechen\yii2\weWork\src\dataStructure;
+	namespace fastwhale\yii2\weWork\src\dataStructure;
 
-	use dovechen\yii2\weWork\components\Utils;
+	use fastwhale\yii2\weWork\components\Utils;
 
 	/**
 	 * Class BatchJobUserResult
@@ -11,7 +11,7 @@
 	 * @property int    $errcode   该成员对应操作的结果错误码
 	 * @property string $errmsg    错误信息，例如无权限错误，键值冲突，格式错误等
 	 *
-	 * @package dovechen\yii2\weWork\src\dataStructure
+	 * @package fastwhale\yii2\weWork\src\dataStructure
 	 */
 	class BatchJobUserResult
 	{

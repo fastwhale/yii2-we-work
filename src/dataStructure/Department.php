@@ -1,8 +1,8 @@
 <?php
 
-	namespace dovechen\yii2\weWork\src\dataStructure;
+	namespace fastwhale\yii2\weWork\src\dataStructure;
 
-	use dovechen\yii2\weWork\components\Utils;
+	use fastwhale\yii2\weWork\components\Utils;
 
 	/**
 	 * Class Department
@@ -13,7 +13,7 @@
 	 * @property int    $parentid    父部门id，32位整型
 	 * @property int    $order       在父部门中的次序值。order值大的排序靠前。有效的值范围是[0, 2^32)
 	 *
-	 * @package dovechen\yii2\weWork\src\dataStructure
+	 * @package fastwhale\yii2\weWork\src\dataStructure
 	 */
 	class Department
 	{

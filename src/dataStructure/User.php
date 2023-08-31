@@ -1,10 +1,10 @@
 <?php
 
-	namespace dovechen\yii2\weWork\src\dataStructure;
+	namespace fastwhale\yii2\weWork\src\dataStructure;
 
 	include_once __DIR__ . "/../../components/errorInc/error.inc.php";
 
-	use dovechen\yii2\weWork\components\Utils;
+	use fastwhale\yii2\weWork\components\Utils;
 
 	/**
 	 * Class User
@@ -34,7 +34,7 @@
 	 * @property string     external_position   对外职务，如果设置了该值，则以此作为对外展示的职务，否则以position来展示。长度12个汉字内
 	 * @property string     address             地址。长度最大128个字符
 	 *
-	 * @package dovechen\yii2\weWork\src\dataStructure
+	 * @package fastwhale\yii2\weWork\src\dataStructure
 	 */
 	class User
 	{

@@ -1,14 +1,14 @@
 <?php
 	/**
 	 * Create by PhpStorm
-	 * User: dovechen
+	 * User: fastwhale
 	 * Date: 2020/1/13
 	 * Time: 11:36
 	 */
 
-	namespace dovechen\yii2\weWork\src\dataStructure;
+	namespace fastwhale\yii2\weWork\src\dataStructure;
 
-	use dovechen\yii2\weWork\components\Utils;
+	use fastwhale\yii2\weWork\components\Utils;
 
 	/**
 	 * Class MarkdownMessageContent
@@ -16,7 +16,7 @@
 	 * @property string $msgtype      消息类型，此时固定为：markdown
 	 * @property string $content      markdown内容，最长不超过2048个字节，必须是utf8编码
 	 *
-	 * @package dovechen\yii2\weWork\src\dataStructure
+	 * @package fastwhale\yii2\weWork\src\dataStructure
 	 */
 	class MarkdownMessageContent
 	{

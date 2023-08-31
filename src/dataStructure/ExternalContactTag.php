@@ -1,8 +1,8 @@
 <?php
 
-	namespace dovechen\yii2\weWork\src\dataStructure;
+	namespace fastwhale\yii2\weWork\src\dataStructure;
 
-	use dovechen\yii2\weWork\components\Utils;
+	use fastwhale\yii2\weWork\components\Utils;
 
 	/**
 	 * Class ExternalContactTag
@@ -13,7 +13,7 @@
 	 * @property string  $order          标签排序的次序值，order值大的排序靠前。有效的值范围是[0, 2^32)
 	 * @property boolean $deleted        标签是否已经被删除，只在指定tag_id进行查询时返回
 	 *
-	 * @package dovechen\yii2\weWork\src\dataStructure
+	 * @package fastwhale\yii2\weWork\src\dataStructure
 	 */
 	class ExternalContactTag
 	{

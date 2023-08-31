@@ -1,8 +1,8 @@
 <?php
 
-	namespace dovechen\yii2\weWork\src\dataStructure;
+	namespace fastwhale\yii2\weWork\src\dataStructure;
 
-	use dovechen\yii2\weWork\components\Utils;
+	use fastwhale\yii2\weWork\components\Utils;
 
 	/**
 	 * Class BatchJobResult
@@ -12,7 +12,7 @@
 	 * @property int    $total         任务运行总条数
 	 * @property int    $percentage    目前运行百分比，当任务完成时为100
 	 * @property array  $result        详细的处理结果，具体格式参考下面说明。当任务完成后此字段有效
-	 * @package dovechen\yii2\weWork\src\dataStructure
+	 * @package fastwhale\yii2\weWork\src\dataStructure
 	 */
 	class BatchJobResult
 	{

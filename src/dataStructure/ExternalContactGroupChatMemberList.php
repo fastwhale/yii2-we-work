@@ -1,8 +1,8 @@
 <?php
 
-	namespace dovechen\yii2\weWork\src\dataStructure;
+	namespace fastwhale\yii2\weWork\src\dataStructure;
 
-	use dovechen\yii2\weWork\components\Utils;
+	use fastwhale\yii2\weWork\components\Utils;
 
 	/**
 	 * Class ExternalContactGroupChatMemberList
@@ -17,7 +17,7 @@
 	 * @property string $name             名字。仅当 need_name = 1 时返回 如果是微信用户，则返回其在微信中设置的名字 如果是企业微信联系人，则返回其设置对外展示的别名或实名
 	 * @property string $state            入群渠道标识
 	 *
-	 * @package dovechen\yii2\weWork\src\dataStructure
+	 * @package fastwhale\yii2\weWork\src\dataStructure
 	 */
 	class ExternalContactGroupChatMemberList
 	{

@@ -1,14 +1,14 @@
 <?php
 	/**
 	 * Create by PhpStorm
-	 * User: dovechen
+	 * User: fastwhale
 	 * Date: 2020/1/13
 	 * Time: 11:50
 	 */
 
-	namespace dovechen\yii2\weWork\src\dataStructure;
+	namespace fastwhale\yii2\weWork\src\dataStructure;
 
-	use dovechen\yii2\weWork\components\Utils;
+	use fastwhale\yii2\weWork\components\Utils;
 
 	/**
 	 * Class TextcardMesssageContent
@@ -19,7 +19,7 @@
 	 * @property string $url         点击后跳转的链接。
 	 * @property string $btntxt      按钮文字。 默认为“详情”， 不超过4个文字，超过自动截断。
 	 *
-	 * @package dovechen\yii2\weWork\src\dataStructure
+	 * @package fastwhale\yii2\weWork\src\dataStructure
 	 */
 	class TextcardMesssageContent
 	{
