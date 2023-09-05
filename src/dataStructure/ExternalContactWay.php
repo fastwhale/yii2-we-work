@@ -43,22 +43,24 @@
 		{
 			$externalContactWay = new ExternalContactWay();
 
-			$externalContactWay->config_id       = Utils::arrayGet($arr, 'config_id');
-			$externalContactWay->type            = Utils::arrayGet($arr, 'type', self::TYPE_ONLY);
-			$externalContactWay->scene           = Utils::arrayGet($arr, 'scene', self::QRCODE_SCENE);
-			$externalContactWay->style           = Utils::arrayGet($arr, 'style', 1);
-			$externalContactWay->remark          = Utils::arrayGet($arr, 'remark');
-			$externalContactWay->skip_verify     = Utils::arrayGet($arr, 'skip_verify', true);
-			$externalContactWay->state           = Utils::arrayGet($arr, 'state');
-			$externalContactWay->user            = Utils::arrayGet($arr, 'user', []);
-			$externalContactWay->party           = Utils::arrayGet($arr, 'party', []);
-			$externalContactWay->is_temp         = Utils::arrayGet($arr, 'is_temp', false);
-			$externalContactWay->expires_in      = Utils::arrayGet($arr, 'expires_in');
-			$externalContactWay->chat_expires_in = Utils::arrayGet($arr, 'chat_expires_in');
-			$externalContactWay->unionid         = Utils::arrayGet($arr, 'unionid');
-			$externalContactWay->is_exclusive    = Utils::arrayGet($arr, 'is_exclusive', false);
-			$externalContactWay->conclusions     = Utils::arrayGet($arr, 'conclusions', []);
-			$externalContactWay->qr_code         = Utils::arrayGet($arr, 'qr_code');
+			$externalContactWay->config_id   = Utils::arrayGet($arr, 'config_id');
+			$externalContactWay->type        = Utils::arrayGet($arr, 'type', self::TYPE_ONLY);
+			$externalContactWay->scene       = Utils::arrayGet($arr, 'scene', self::QRCODE_SCENE);
+			$externalContactWay->style       = Utils::arrayGet($arr, 'style', 1);
+			$externalContactWay->remark      = Utils::arrayGet($arr, 'remark');
+			$externalContactWay->skip_verify = Utils::arrayGet($arr, 'skip_verify', true);
+			$externalContactWay->state       = Utils::arrayGet($arr, 'state');
+			$externalContactWay->user        = Utils::arrayGet($arr, 'user', []);
+			$externalContactWay->party       = Utils::arrayGet($arr, 'party', []);
+			$externalContactWay->is_temp     = Utils::arrayGet($arr, 'is_temp', false);
+			if ($externalContactWay->is_temp) {
+				$externalContactWay->expires_in      = Utils::arrayGet($arr, 'expires_in');
+				$externalContactWay->chat_expires_in = Utils::arrayGet($arr, 'chat_expires_in');
+				$externalContactWay->unionid         = Utils::arrayGet($arr, 'unionid');
+				$externalContactWay->conclusions     = Utils::arrayGet($arr, 'conclusions', []);
+			}
+			$externalContactWay->is_exclusive = Utils::arrayGet($arr, 'is_exclusive', false);
+			$externalContactWay->qr_code      = Utils::arrayGet($arr, 'qr_code');
 
 			return $externalContactWay;
 		}
