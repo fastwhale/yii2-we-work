@@ -2212,4 +2212,47 @@
 
 			return $this->repJson;
 		}
+
+		/* 创建获客链接 */
+		public function ECAddCustomerAcquisition ($message)
+		{
+			self::_HttpCall(self::EXTERNAL_CREATE_LINK, 'POST', $message);
+
+			return $this->repJson;
+		}
+		/* 编辑获客链接 */
+		public function ECUpdateCustomerAcquisition ($message)
+		{
+			self::_HttpCall(self::EXTERNAL_UPDATE_LINK, 'POST', $message);
+
+			return $this->repJson;
+		}
+		/* 删除获客链接 */
+		public function ECDelCustomerAcquisition ($message)
+		{
+			self::_HttpCall(self::EXTERNAL_DELETE_LINK, 'POST', $message);
+
+			return $this->repJson;
+		}
+		/* 获取获客链接信息 */
+		public function ECGetCustomerAcquisition ($message)
+		{
+			self::_HttpCall(self::EXTERNAL_GET_LINK, 'POST', $message);
+
+			return $this->repJson;
+		}
+		/* 查询链接使用详情 */
+		public function ECGetCustomerAcquisitionStatistic ($message)
+		{
+			self::_HttpCall(self::EXTERNAL_GET_LINK_STATISTIC, 'POST', $message);
+
+			return $this->repJson;
+		}
+		/* 查询剩余使用量 */
+		public function ECGetCustomerAcquisitionQuota ()
+		{
+			self::_HttpCall(self::EXTERNAL_GET_LINK_QUOTA, 'GET');
+
+			return $this->repJson;
+		}
 	}
