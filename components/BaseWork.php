@@ -399,12 +399,14 @@
 		/*打卡列表*/
 		const GETAPPROVALINFO = '/cgi-bin/oa/getapprovalinfo?access_token=ACCESS_TOKEN';
 		/*获客助手*/
-		const EXTERNAL_CREATE_LINK = '/cgi-bin/externalcontact/customer_acquisition/create_link?access_token=ACCESS_TOKEN'; // 创建获客链接
-		const EXTERNAL_UPDATE_LINK = '/cgi-bin/externalcontact/customer_acquisition/update_link?access_token=ACCESS_TOKEN'; // 编辑获客链接
-		const EXTERNAL_DELETE_LINK = '/cgi-bin/externalcontact/customer_acquisition/delete_link?access_token=ACCESS_TOKEN'; // 删除获客链接
-		const EXTERNAL_GET_LINK = '/cgi-bin/externalcontact/customer_acquisition/get?access_token=ACCESS_TOKEN'; // 获取获客链接详情
-		const EXTERNAL_GET_LINK_QUOTA = '/cgi-bin/externalcontact/customer_acquisition_quota?access_token=ACCESS_TOKEN'; // 查询剩余使用量
+		const EXTERNAL_GET_LIST_LINK      = '/cgi-bin/externalcontact/customer_acquisition/list_link?access_token=ACCESS_TOKEN';   // 获取获客链接列表
+		const EXTERNAL_CREATE_LINK        = '/cgi-bin/externalcontact/customer_acquisition/create_link?access_token=ACCESS_TOKEN'; // 创建获客链接
+		const EXTERNAL_GET_LINK           = '/cgi-bin/externalcontact/customer_acquisition/get?access_token=ACCESS_TOKEN'; // 获取获客链接详情
+		const EXTERNAL_UPDATE_LINK        = '/cgi-bin/externalcontact/customer_acquisition/update_link?access_token=ACCESS_TOKEN'; // 编辑获客链接
+		const EXTERNAL_DELETE_LINK        = '/cgi-bin/externalcontact/customer_acquisition/delete_link?access_token=ACCESS_TOKEN'; // 删除获客链接
+		const EXTERNAL_GET_LINK_QUOTA     = '/cgi-bin/externalcontact/customer_acquisition_quota?access_token=ACCESS_TOKEN'; // 查询剩余使用量
 		const EXTERNAL_GET_LINK_STATISTIC = '/cgi-bin/externalcontact/customer_acquisition/statistic?access_token=ACCESS_TOKEN'; // 查询链接使用详情
+		const EXTERNAL_GET_LINK_CUSTOMER  = '/cgi-bin/externalcontact/customer_acquisition/customer?access_token=ACCESS_TOKEN';    // 获取获客客户列表
 
 		protected function GetAccessToken ($force = false)
 		{

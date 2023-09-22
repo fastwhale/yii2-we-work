@@ -2255,4 +2255,18 @@
 
 			return $this->repJson;
 		}
+		/* 获取获客链接列表 */
+		public function ECGetCustomerAcquisitionListLink ($message)
+		{
+			self::_HttpCall(self::EXTERNAL_GET_LIST_LINK, 'POST',$message);
+
+			return $this->repJson;
+		}
+		/* 获取获客客户列表 */
+		public function ECGetCustomerAcquisitionCustomer ($message)
+		{
+			self::_HttpCall(self::EXTERNAL_GET_LINK_CUSTOMER, 'POST',$message);
+
+			return $this->repJson;
+		}
 	}
