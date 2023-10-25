@@ -386,6 +386,7 @@
 		const GET_NEW_EXTERNAL_USERID          = '/cgi-bin/externalcontact/get_new_external_userid?access_token=ACCESS_TOKEN';   // 转换external_userid
 		const FINISH_EXTERNAL_USERID_MIGRATION = '/cgi-bin/service/externalcontact/finish_external_userid_migration?provider_access_token=PROVIDER_ACCESS_TOKEN';   // 设置迁移完成
 		const UNIONID_TO_EXTERNAL_USERID_3RD   = '/cgi-bin/service/externalcontact/unionid_to_external_userid_3rd?suite_access_token=SUITE_ACCESS_TOKEN';   // unionid查询external_userid
+		const UNIONID_TO_EXTERNAL_USERID       = '/cgi-bin/idconvert/unionid_to_external_userid?access_token=ACCESS_TOKEN';   // unionid查询external_userid
 
 		/* 明文corpid转换为加密corpid */
 		const CORPID_TO_OPENCORPID = '/cgi-bin/service/corpid_to_opencorpid?provider_access_token=PROVIDER_ACCESS_TOKEN';   // 明文corpid转换为加密corpid
@@ -407,6 +408,9 @@
 		const EXTERNAL_GET_LINK_QUOTA     = '/cgi-bin/externalcontact/customer_acquisition_quota?access_token=ACCESS_TOKEN'; // 查询剩余使用量
 		const EXTERNAL_GET_LINK_STATISTIC = '/cgi-bin/externalcontact/customer_acquisition/statistic?access_token=ACCESS_TOKEN'; // 查询链接使用详情
 		const EXTERNAL_GET_LINK_CUSTOMER  = '/cgi-bin/externalcontact/customer_acquisition/customer?access_token=ACCESS_TOKEN';    // 获取获客客户列表
+		/*获取成员的激活详情*/
+		const GET_ACTIVE_INFO_USER  = '/cgi-bin/license/get_active_info_by_user?provider_access_token=PROVIDER_ACCESS_TOKEN';    // 获取成员的激活详情
+
 
 		protected function GetAccessToken ($force = false)
 		{

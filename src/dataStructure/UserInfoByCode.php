@@ -15,6 +15,7 @@
 	 * @property string $user_ticket        成员票据，最大为512字节。  scope为snsapi_userinfo或snsapi_privateinfo，且用户在应用可见范围之内时返回此参数。
 	 * @property string $expires_in         user_ticket的有效时间（秒），随user_ticket一起返回
 	 * @property string $open_userid        全局唯一。对于同一个服务商，不同应用获取到企业内同一个成员的open_userid是相同的，最多64个字节。仅第三方应用可获取
+	 * @property string $Unionid            非企业成员的标识，对当前服务商唯一
 	 *
 	 * @package fastwhale\yii2\weWork\src\dataStructure
 	 */
@@ -33,6 +34,7 @@
 			$userInfo->UserId          = Utils::arrayGet($arr, 'UserId');
 			$userInfo->external_userid = Utils::arrayGet($arr, 'external_userid');
 			$userInfo->OpenId          = Utils::arrayGet($arr, 'OpenId');
+			$userInfo->Unionid         = Utils::arrayGet($arr, 'Unionid');
 			$userInfo->DeviceId        = Utils::arrayGet($arr, 'DeviceId');
 			$userInfo->user_ticket     = Utils::arrayGet($arr, 'user_ticket');
 			$userInfo->expires_in      = Utils::arrayGet($arr, 'expires_in');

@@ -167,4 +167,12 @@
 
 			return $this->repJson;
 		}
+
+		/* 获取成员的激活详情 */
+		public function getActiveInfoUser ($message)
+		{
+			self::_HttpCall(self::GET_ACTIVE_INFO_USER, 'POST',$message);
+
+			return $this->repJson;
+		}
 	}

@@ -2213,6 +2213,22 @@
 			return $this->repJson;
 		}
 
+		
+		public function unionidToExternalUserid ($unionid, $openid, $subject_type = 0)
+		{
+			Utils::checkNotEmptyStr($unionid, "unionid");
+			Utils::checkNotEmptyStr($openid, "openid");
+
+			$args = [
+				'unionid' => $unionid,
+				'openid'  => $openid,
+				'subject_type'  => $subject_type,
+			];
+			self::_HttpCall(self::UNIONID_TO_EXTERNAL_USERID, 'POST', $args);
+			
+			return $this->repJson;
+		}
+		
 		/* 创建获客链接 */
 		public function ECAddCustomerAcquisition ($message)
 		{
