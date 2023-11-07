@@ -630,12 +630,16 @@
 		}
 
 		/* 客户标签管理 */
-		public function ECGetCorpTagList ($tagIdList = NULL)
+		public function ECGetCorpTagList ($tagIdList = NULL, $groupIdList = NULL)
 		{
 			$args = [];
 			if (!is_null($tagIdList)) {
 				Utils::checkNotEmptyArray($tagIdList, 'tag id list');
 				$args['tag_id'] = $tagIdList;
+			}
+			if (!is_null($groupIdList)) {
+				Utils::checkNotEmptyArray($groupIdList, 'group id list');
+				$args['group_id'] = $groupIdList;
 			}
 
 			self::_HttpCall(self::EXTERNAL_CONTACT_GET_CORP_TAG_LIST, 'POST', $args);
@@ -855,6 +859,21 @@
 		{
 			Utils::checkNotEmptyStr($sendData['msgid'] ?? '', 'msgid');
 			self::_HttpCall(self::EXTERNAL_CONTACT_CANCEL_GROUPMSG_SEND, 'POST', $sendData);
+
+			return $this->repJson;
+		}
+
+		public function ECGetGroupmsgListV2 ($sendData, $limit = 100, $cursor = '')
+		{
+			Utils::checkNotEmptyStr($sendData['chat_type'] ?? '', 'chat_type');
+			Utils::checkNotEmptyStr($sendData['creator'] ?? '', 'creator');
+
+			$sendData['limit'] = $limit;
+			if (!empty($cursor)) {
+				$sendData['cursor'] = $cursor;
+			}
+
+			self::_HttpCall(self::EXTERNAL_CONTACT_GET_GROUPMSG_LIST_V2, 'POST', $sendData);
 
 			return $this->repJson;
 		}
@@ -2213,22 +2232,21 @@
 			return $this->repJson;
 		}
 
-		
 		public function unionidToExternalUserid ($unionid, $openid, $subject_type = 0)
 		{
 			Utils::checkNotEmptyStr($unionid, "unionid");
 			Utils::checkNotEmptyStr($openid, "openid");
 
 			$args = [
-				'unionid' => $unionid,
-				'openid'  => $openid,
-				'subject_type'  => $subject_type,
+				'unionid'      => $unionid,
+				'openid'       => $openid,
+				'subject_type' => $subject_type,
 			];
 			self::_HttpCall(self::UNIONID_TO_EXTERNAL_USERID, 'POST', $args);
-			
+
 			return $this->repJson;
 		}
-		
+
 		/* 创建获客链接 */
 		public function ECAddCustomerAcquisition ($message)
 		{
@@ -2236,6 +2254,7 @@
 
 			return $this->repJson;
 		}
+
 		/* 编辑获客链接 */
 		public function ECUpdateCustomerAcquisition ($message)
 		{
@@ -2243,6 +2262,7 @@
 
 			return $this->repJson;
 		}
+
 		/* 删除获客链接 */
 		public function ECDelCustomerAcquisition ($message)
 		{
@@ -2250,6 +2270,7 @@
 
 			return $this->repJson;
 		}
+
 		/* 获取获客链接信息 */
 		public function ECGetCustomerAcquisition ($message)
 		{
@@ -2257,6 +2278,7 @@
 
 			return $this->repJson;
 		}
+
 		/* 查询链接使用详情 */
 		public function ECGetCustomerAcquisitionStatistic ($message)
 		{
@@ -2264,6 +2286,7 @@
 
 			return $this->repJson;
 		}
+
 		/* 查询剩余使用量 */
 		public function ECGetCustomerAcquisitionQuota ()
 		{
@@ -2271,17 +2294,30 @@
 
 			return $this->repJson;
 		}
+
 		/* 获取获客链接列表 */
 		public function ECGetCustomerAcquisitionListLink ($message)
 		{
-			self::_HttpCall(self::EXTERNAL_GET_LIST_LINK, 'POST',$message);
+			self::_HttpCall(self::EXTERNAL_GET_LIST_LINK, 'POST', $message);
 
 			return $this->repJson;
 		}
+
 		/* 获取获客客户列表 */
 		public function ECGetCustomerAcquisitionCustomer ($message)
 		{
-			self::_HttpCall(self::EXTERNAL_GET_LINK_CUSTOMER, 'POST',$message);
+			self::_HttpCall(self::EXTERNAL_GET_LINK_CUSTOMER, 'POST', $message);
+
+			return $this->repJson;
+		}
+
+		/* 获取打卡日报数据 */
+		public function Getcheckindaydata ($starttime, $endtime, $useridlist)
+		{
+			Utils::checkNotEmptyStr($starttime, 'starttime');
+			Utils::checkNotEmptyStr($endtime, 'endtime');
+			Utils::checkNotEmptyArray($useridlist, 'useridlist');
+			self::_HttpCall(self::GETCHECKINDAYDATA, 'POST', ['starttime' => $starttime, 'endtime' => $endtime, 'useridlist' => $useridlist]);
 
 			return $this->repJson;
 		}

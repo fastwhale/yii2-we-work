@@ -109,6 +109,8 @@
 		const EXTERNAL_CONTACT_REMIND_GROUPMSG_SEND     = '/cgi-bin/externalcontact/remind_groupmsg_send?access_token=ACCESS_TOKEN';        // 提醒成员群发 POST
 		const EXTERNAL_CONTACT_CANCEL_GROUPMSG_SEND     = '/cgi-bin/externalcontact/cancel_groupmsg_send?access_token=ACCESS_TOKEN';        // 停止企业群发 POST
 
+		const EXTERNAL_CONTACT_GET_GROUPMSG_LIST_V2 = '/cgi-bin/externalcontact/get_groupmsg_list_v2?access_token=ACCESS_TOKEN'; // 获取群发记录列表 POST
+
 		const EXTERNAL_CONTACT_SEND_WELCOME_MSG            = '/cgi-bin/externalcontact/send_welcome_msg?access_token=ACCESS_TOKEN';    // 发送新客户欢迎语 POST
 		const EXTERNAL_CONTACT_GROUP_WELCOME_TEMPLATE_ADD  = '/cgi-bin/externalcontact/group_welcome_template/add?access_token=ACCESS_TOKEN';    // 添加群欢迎语素材 POST
 		const EXTERNAL_CONTACT_GROUP_WELCOME_TEMPLATE_EDIT = '/cgi-bin/externalcontact/group_welcome_template/edit?access_token=ACCESS_TOKEN';    // 编辑群欢迎语素材 POST
@@ -397,6 +399,8 @@
 
 		/*获取打卡记录数据*/
 		const GETCHECKINDATA = '/cgi-bin/checkin/getcheckindata?access_token=ACCESS_TOKEN';   // external_userid转换
+		/*获取打卡日报数据*/
+		const GETCHECKINDAYDATA = '/cgi-bin/checkin/getcheckin_daydata?access_token=ACCESS_TOKEN';
 		/*打卡列表*/
 		const GETAPPROVALINFO = '/cgi-bin/oa/getapprovalinfo?access_token=ACCESS_TOKEN';
 		/*获客助手*/
@@ -409,8 +413,7 @@
 		const EXTERNAL_GET_LINK_STATISTIC = '/cgi-bin/externalcontact/customer_acquisition/statistic?access_token=ACCESS_TOKEN'; // 查询链接使用详情
 		const EXTERNAL_GET_LINK_CUSTOMER  = '/cgi-bin/externalcontact/customer_acquisition/customer?access_token=ACCESS_TOKEN';    // 获取获客客户列表
 		/*获取成员的激活详情*/
-		const GET_ACTIVE_INFO_USER  = '/cgi-bin/license/get_active_info_by_user?provider_access_token=PROVIDER_ACCESS_TOKEN';    // 获取成员的激活详情
-
+		const GET_ACTIVE_INFO_USER = '/cgi-bin/license/get_active_info_by_user?provider_access_token=PROVIDER_ACCESS_TOKEN';    // 获取成员的激活详情
 
 		protected function GetAccessToken ($force = false)
 		{
