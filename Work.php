@@ -1031,7 +1031,6 @@
 		public function getSysTemplate ($data)
 		{
 			self::_HttpCall(self::OA_GET_TEMPLATE_DETIAL, 'POST', $data);
-
 			return $this->repJson;
 		}
 
@@ -1195,6 +1194,42 @@
 			self::_HttpCall(self::MEDIA_UPLOAD . '&type=' . $type, 'POST', $args, true, true);
 
 			return $this->repJson["media_id"];
+		}
+
+				/*异步上传临时素材*/
+		public function MediaUploadByUrl ($filePath, $filename, $url, $scene= 0, $type='file')
+		{
+			Utils::checkNotEmptyStr($filePath, "filePath");
+			Utils::checkNotEmptyStr($filename, "filename");
+			Utils::checkNotEmptyStr($url, "url");
+
+			if (file_exists($filePath)) {
+				$md5 = md5_file($filePath);
+			} else {
+				throw new \QyApiError("file not exists");
+			}
+			$args = [
+				'scene'    => $scene,
+				'type'     => $type,
+				'filename' => $filename,
+				'url'      => $url,
+				'md5'      => $md5,
+			];
+			var_dump($args);
+			self::_HttpCall(self::MEDIA_UPLOAD_BY_URL, 'POST', $args, true);
+
+			return $this->repJson["jobid"];
+		}
+
+		/*获取异步上传素材文件结果*/
+		public function MediaGetUploadByUrlResult($jobid){
+			Utils::checkNotEmptyStr($jobid, "jobid");
+			$args = [
+				'jobid'    => $jobid
+			];
+			self::_HttpCall(self::MEDIA_GET_UPLOAD_BY_URL_RESULT, 'POST', $args, true);
+
+			return $this->repJson;
 		}
 
 		/* 附件管理 */
@@ -2232,20 +2267,7 @@
 			return $this->repJson;
 		}
 
-		public function unionidToExternalUserid ($unionid, $openid, $subject_type = 0)
-		{
-			Utils::checkNotEmptyStr($unionid, "unionid");
-			Utils::checkNotEmptyStr($openid, "openid");
 
-			$args = [
-				'unionid'      => $unionid,
-				'openid'       => $openid,
-				'subject_type' => $subject_type,
-			];
-			self::_HttpCall(self::UNIONID_TO_EXTERNAL_USERID, 'POST', $args);
-
-			return $this->repJson;
-		}
 
 		/* 创建获客链接 */
 		public function ECAddCustomerAcquisition ($message)
@@ -2318,6 +2340,56 @@
 			Utils::checkNotEmptyStr($endtime, 'endtime');
 			Utils::checkNotEmptyArray($useridlist, 'useridlist');
 			self::_HttpCall(self::GETCHECKINDAYDATA, 'POST', ['starttime' => $starttime, 'endtime' => $endtime, 'useridlist' => $useridlist]);
+
+			return $this->repJson;
+		}
+		
+		public function unionidToExternalUserid ($unionid, $openid, $subject_type = 0)
+		{
+			Utils::checkNotEmptyStr($unionid, "unionid");
+			Utils::checkNotEmptyStr($openid, "openid");
+
+			$args = [
+				'unionid'      => $unionid,
+				'openid'       => $openid,
+				'subject_type' => $subject_type,
+			];
+			self::_HttpCall(self::UNIONID_TO_EXTERNAL_USERID, 'POST', $args);
+
+			return $this->repJson;
+		}
+		/* 创建预约会议*/
+		public function ECMeetingCreate ($data)
+		{
+			self::_HttpCall(self::MEETING_CREATE, 'POST', $data);
+
+			return $this->repJson;
+		}
+		/* 修改预约会议 */
+		public function ECMeetingUpdate ($data)
+		{
+			self::_HttpCall(self::MEETING_UPDATE, 'POST', $data);
+
+			return $this->repJson;
+		}
+		/* 取消预约会议 */
+		public function ECMeetingCancel ($data)
+		{
+			self::_HttpCall(self::MEETING_CANCEL, 'POST', $data);
+
+			return $this->repJson;
+		}
+		/* 获取会议详情 */
+		public function ECGetMeetingInfo ($data)
+		{
+			self::_HttpCall(self::GET_MEETING_INFO, 'POST', $data);
+
+			return $this->repJson;
+		}
+		/* 获取成员会议ID列表 */
+		public function ECGetUserMeetingId ($data)
+		{
+			self::_HttpCall(self::GET_USER_MEETING_ID, 'POST', $data);
 
 			return $this->repJson;
 		}

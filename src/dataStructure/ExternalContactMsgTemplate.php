@@ -10,6 +10,7 @@
 	 * @property string $welcome_code       通过添加外部联系人事件推送给企业的发送欢迎语的凭证，有效期为20秒
 	 * @property string $template_id        欢迎语素材id
 	 * @property array  $external_userid    客户的外部联系人id列表，不可与sender同时为空，最多可传入1万个客户
+	 * @property array  $chat_id_list       客户群id列表，仅在chat_type为group时有效，最多可一次指定2000个客户群
 	 * @property string $sender             发送企业群发消息的成员userid，不可与external_userid同时为空
 	 * @property string $chat_type          群发任务的类型，默认为single，表示发送给客户，group表示发送给客户群
 	 * @property string $allow_select       是否允许成员在待发送客户列表中重新进行选择，默认为false
@@ -40,6 +41,11 @@
 			$templateExternalUserid = Utils::arrayGet($arr, 'external_userid');
 			if (!is_null($templateExternalUserid)) {
 				$template->external_userid = $templateExternalUserid;
+			}
+
+			$templateChatIdList = Utils::arrayGet($arr, 'chat_id_list');
+			if (!is_null($templateChatIdList)) {
+				$template->chat_id_list = $templateChatIdList;
 			}
 
 			$templateTemplateId = Utils::arrayGet($arr, 'template_id');
