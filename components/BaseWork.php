@@ -181,11 +181,10 @@
 		/* 素材管理 */
 		/* 上传临时素材 */
 		const MEDIA_UPLOAD = '/cgi-bin/media/upload?access_token=ACCESS_TOKEN'; // 上传临时素材 POST
-		
+
 		/* 异步上传任务 */
 		const MEDIA_UPLOAD_BY_URL            = '/cgi-bin/media/upload_by_url?access_token=ACCESS_TOKEN'; // 生成异步上传任务
 		const MEDIA_GET_UPLOAD_BY_URL_RESULT = '/cgi-bin/media/get_upload_by_url_result?access_token=ACCESS_TOKEN'; // 获取异步上传文件结果
-
 
 		/* 上传图片 */
 		const MEDIA_UPLOAD_IMG = '/cgi-bin/media/uploadimg?access_token=ACCESS_TOKEN'; // 上传图片 POST
@@ -418,7 +417,8 @@
 		const EXTERNAL_GET_LINK_STATISTIC = '/cgi-bin/externalcontact/customer_acquisition/statistic?access_token=ACCESS_TOKEN'; // 查询链接使用详情
 		const EXTERNAL_GET_LINK_CUSTOMER  = '/cgi-bin/externalcontact/customer_acquisition/customer?access_token=ACCESS_TOKEN';    // 获取获客客户列表
 		/*获取成员的激活详情*/
-		const GET_ACTIVE_INFO_USER = '/cgi-bin/license/get_active_info_by_user?provider_access_token=PROVIDER_ACCESS_TOKEN';    // 获取成员的激活详情
+		const GET_ACTIVE_INFO_USER   = '/cgi-bin/license/get_active_info_by_user?provider_access_token=PROVIDER_ACCESS_TOKEN';    // 获取成员的激活详情
+		const BATCH_TRANSFER_LICENSE = '/cgi-bin/license/batch_transfer_license?provider_access_token=ACCESS_TOKEN';    // 账号继承
 
 		/* 企业微信预约会议 */
 		const MEETING_CREATE      = '/cgi-bin/meeting/create?access_token=ACCESS_TOKEN';   // 创建预约会议 POST
@@ -426,6 +426,14 @@
 		const MEETING_CANCEL      = '/cgi-bin/meeting/cancel?access_token=ACCESS_TOKEN';   // 取消预约会议 POST
 		const GET_MEETING_INFO    = '/cgi-bin/meeting/get_info?access_token=ACCESS_TOKEN';   // 获取会议详情 POST
 		const GET_USER_MEETING_ID = '/cgi-bin/meeting/get_user_meetingid?access_token=ACCESS_TOKEN';   // 获取成员会议ID列表 POST
+
+		/* 服务商会话存档接口 */
+		const GET_AUTH_USER_LIST   = "/cgi-bin/chatdata/get_auth_user_list?access_token=ACCESS_TOKEN";    // 服务商会话存档 获取授权存档的成员列表
+		const SET_PUBLIC_KEY       = "/cgi-bin/chatdata/set_public_key?access_token=ACCESS_TOKEN";    // 服务商会话存档 设置公钥
+		const SET_RECEIVE_CALLBACK = "/cgi-bin/chatdata/set_receive_callback?access_token=ACCESS_TOKEN";    // 服务商会话存档 设置专区接收回调事件
+		const SYNC_CALL_PROGRAM    = "/cgi-bin/chatdata/sync_call_program?access_token=ACCESS_TOKEN";    // 服务商会话存档 应用同步调用专区程序
+		const ASYNC_CALL_PROGRAM   = "/cgi-bin/chatdata/async_program_task?access_token=ACCESS_TOKEN";    // 服务商会话存档 创建专区程序调用任务
+		const ASYNC_PROGRAM_RESULT = "/cgi-bin/chatdata/async_program_result?access_token=ACCESS_TOKEN";    // 服务商会话存档 获取专区程序任务结果
 
 		protected function GetAccessToken ($force = false)
 		{

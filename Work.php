@@ -975,6 +975,13 @@
 			return $this->repJson;
 		}
 
+		public function ECScheduleUpdate ($params)
+		{
+			self::_HttpCall(self::OA_SCHEDULE_UPDATE, 'POST', $params);
+
+			return $this->repJson;
+		}
+
 		public function ECAddJoinWay ($params)
 		{
 			self::_HttpCall(self::ADD_JOIN_WAY, 'POST', $params);
@@ -1031,6 +1038,7 @@
 		public function getSysTemplate ($data)
 		{
 			self::_HttpCall(self::OA_GET_TEMPLATE_DETIAL, 'POST', $data);
+
 			return $this->repJson;
 		}
 
@@ -1196,8 +1204,8 @@
 			return $this->repJson["media_id"];
 		}
 
-				/*异步上传临时素材*/
-		public function MediaUploadByUrl ($filePath, $filename, $url, $scene= 0, $type='file')
+		/*异步上传临时素材*/
+		public function MediaUploadByUrl ($filePath, $filename, $url, $scene = 0, $type = 'file')
 		{
 			Utils::checkNotEmptyStr($filePath, "filePath");
 			Utils::checkNotEmptyStr($filename, "filename");
@@ -1222,10 +1230,11 @@
 		}
 
 		/*获取异步上传素材文件结果*/
-		public function MediaGetUploadByUrlResult($jobid){
+		public function MediaGetUploadByUrlResult ($jobid)
+		{
 			Utils::checkNotEmptyStr($jobid, "jobid");
 			$args = [
-				'jobid'    => $jobid
+				'jobid' => $jobid
 			];
 			self::_HttpCall(self::MEDIA_GET_UPLOAD_BY_URL_RESULT, 'POST', $args, true);
 
@@ -2267,8 +2276,6 @@
 			return $this->repJson;
 		}
 
-
-
 		/* 创建获客链接 */
 		public function ECAddCustomerAcquisition ($message)
 		{
@@ -2343,7 +2350,7 @@
 
 			return $this->repJson;
 		}
-		
+
 		public function unionidToExternalUserid ($unionid, $openid, $subject_type = 0)
 		{
 			Utils::checkNotEmptyStr($unionid, "unionid");
@@ -2358,6 +2365,7 @@
 
 			return $this->repJson;
 		}
+
 		/* 创建预约会议*/
 		public function ECMeetingCreate ($data)
 		{
@@ -2365,6 +2373,7 @@
 
 			return $this->repJson;
 		}
+
 		/* 修改预约会议 */
 		public function ECMeetingUpdate ($data)
 		{
@@ -2372,6 +2381,7 @@
 
 			return $this->repJson;
 		}
+
 		/* 取消预约会议 */
 		public function ECMeetingCancel ($data)
 		{
@@ -2379,6 +2389,7 @@
 
 			return $this->repJson;
 		}
+
 		/* 获取会议详情 */
 		public function ECGetMeetingInfo ($data)
 		{
@@ -2386,10 +2397,59 @@
 
 			return $this->repJson;
 		}
+
 		/* 获取成员会议ID列表 */
 		public function ECGetUserMeetingId ($data)
 		{
 			self::_HttpCall(self::GET_USER_MEETING_ID, 'POST', $data);
+
+			return $this->repJson;
+		}
+
+		/* 服务商会话存档  设置公钥 */
+		public function SetPublicKey ($data)
+		{
+			self::_HttpCall(self::SET_PUBLIC_KEY, 'POST', $data);
+
+			return $this->repJson;
+		}
+
+		/* 服务商会话存档 获取授权存档的成员列表 */
+		public function GetAuthUserList ($data)
+		{
+			self::_HttpCall(self::GET_AUTH_USER_LIST, 'POST', $data);
+
+			return $this->repJson;
+		}
+
+		/* 服务商会话存档 获取授权存档的成员列表 */
+		public function SetReceiveCallback ($data)
+		{
+			self::_HttpCall(self::SET_RECEIVE_CALLBACK, 'POST', $data);
+
+			return $this->repJson;
+		}
+
+		/* 服务商会话存档  应用同步调用专区程序 */
+		public function SyncCallProgram ($data)
+		{
+			self::_HttpCall(self::SYNC_CALL_PROGRAM, 'POST', $data);
+
+			return $this->repJson;
+		}
+
+		/* 服务商会话存档  创建专区程序调用任务 */
+		public function AsyncCallProgram ($data)
+		{
+			self::_HttpCall(self::ASYNC_CALL_PROGRAM, 'POST', $data);
+
+			return $this->repJson;
+		}
+
+		/* 服务商会话存档  获取专区程序任务结果 */
+		public function AsyncProgramResult ($data)
+		{
+			self::_HttpCall(self::ASYNC_PROGRAM_RESULT, 'POST', $data);
 
 			return $this->repJson;
 		}

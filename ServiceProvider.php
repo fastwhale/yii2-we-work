@@ -171,7 +171,15 @@
 		/* 获取成员的激活详情 */
 		public function getActiveInfoUser ($message)
 		{
-			self::_HttpCall(self::GET_ACTIVE_INFO_USER, 'POST',$message);
+			self::_HttpCall(self::GET_ACTIVE_INFO_USER, 'POST', $message);
+
+			return $this->repJson;
+		}
+
+		/* 账号继承 */
+		public function batchTransferLicense ($message)
+		{
+			self::_HttpCall(self::BATCH_TRANSFER_LICENSE, 'POST', $message);
 
 			return $this->repJson;
 		}
