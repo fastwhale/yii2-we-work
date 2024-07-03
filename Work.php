@@ -2422,7 +2422,7 @@
 			return $this->repJson;
 		}
 
-		/* 服务商会话存档 获取授权存档的成员列表 */
+		/* 服务商会话存档 设置专区接收回调事件 */
 		public function SetReceiveCallback ($data)
 		{
 			self::_HttpCall(self::SET_RECEIVE_CALLBACK, 'POST', $data);
@@ -2450,6 +2450,14 @@
 		public function AsyncProgramResult ($data)
 		{
 			self::_HttpCall(self::ASYNC_PROGRAM_RESULT, 'POST', $data);
+
+			return $this->repJson;
+		}
+
+		/* 获取应用权限详情 代开发自建应用/第三方应用 */
+		public function GetPermissions ($data)
+		{
+			self::_HttpCall(self::GET_PERMISSIONS, 'POST', $data);
 
 			return $this->repJson;
 		}

@@ -255,6 +255,8 @@
 		const SERVICE_GET_CORP_TOKEN     = '/cgi-bin/service/get_corp_token?suite_access_token=SUITE_ACCESS_TOKEN';   // 获取企业凭证 POST
 		const SERVICE_GET_ADMIN_LIST     = '/cgi-bin/service/get_admin_list?suite_access_token=SUITE_ACCESS_TOKEN';   // 获取应用的管理员列表 POST
 
+		const GET_PERMISSIONS = "/cgi-bin/agent/get_permissions?access_token=ACCESS_TOKEN"; // 获取应用权限详情  代开发自建应用/第三方应用
+
 		/* 身份验证 */
 		/* 网页授权登录 */
 		const SERVICE_GET_USER_INFO   = '/cgi-bin/service/getuserinfo3rd?access_token=SUITE_ACCESS_TOKEN';    // 获取访问用户身份 GET
