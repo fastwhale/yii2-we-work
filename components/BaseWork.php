@@ -395,6 +395,9 @@
 		const FINISH_EXTERNAL_USERID_MIGRATION = '/cgi-bin/service/externalcontact/finish_external_userid_migration?provider_access_token=PROVIDER_ACCESS_TOKEN';   // 设置迁移完成
 		const UNIONID_TO_EXTERNAL_USERID_3RD   = '/cgi-bin/service/externalcontact/unionid_to_external_userid_3rd?suite_access_token=SUITE_ACCESS_TOKEN';   // unionid查询external_userid
 		const UNIONID_TO_EXTERNAL_USERID       = '/cgi-bin/idconvert/unionid_to_external_userid?access_token=ACCESS_TOKEN';   // unionid查询external_userid
+		const APPLY_TO_UPGRADE_CHATID          = '/cgi-bin/idconvert/apply_to_upgrade_chatid?access_token=ACCESS_TOKEN';   // 申请群ID的升级
+		const IDCONVERT_CHATID                 = '/cgi-bin/idconvert/chatid?access_token=ACCESS_TOKEN';   // 群ID转换接口
+		const UPGRADE_CHATID_FOR_NEW_CORP      = '/cgi-bin/idconvert/upgrade_chatid_for_new_corp?suite_access_token=SUITE_ACCESS_TOKEN';   // 对所有新授权企业升级群ID
 
 		/* 明文corpid转换为加密corpid */
 		const CORPID_TO_OPENCORPID = '/cgi-bin/service/corpid_to_opencorpid?provider_access_token=PROVIDER_ACCESS_TOKEN';   // 明文corpid转换为加密corpid
@@ -420,7 +423,7 @@
 		const EXTERNAL_GET_LINK_CUSTOMER  = '/cgi-bin/externalcontact/customer_acquisition/customer?access_token=ACCESS_TOKEN';    // 获取获客客户列表
 		/*获取成员的激活详情*/
 		const GET_ACTIVE_INFO_USER   = '/cgi-bin/license/get_active_info_by_user?provider_access_token=PROVIDER_ACCESS_TOKEN';    // 获取成员的激活详情
-		const BATCH_TRANSFER_LICENSE = '/cgi-bin/license/batch_transfer_license?provider_access_token=ACCESS_TOKEN';    // 账号继承
+		const BATCH_TRANSFER_LICENSE = '/cgi-bin/license/batch_transfer_license?provider_access_token=PROVIDER_ACCESS_TOKEN';    // 账号继承
 
 		/* 企业微信预约会议 */
 		const MEETING_CREATE      = '/cgi-bin/meeting/create?access_token=ACCESS_TOKEN';   // 创建预约会议 POST
@@ -430,12 +433,15 @@
 		const GET_USER_MEETING_ID = '/cgi-bin/meeting/get_user_meetingid?access_token=ACCESS_TOKEN';   // 获取成员会议ID列表 POST
 
 		/* 服务商会话存档接口 */
-		const GET_AUTH_USER_LIST   = "/cgi-bin/chatdata/get_auth_user_list?access_token=ACCESS_TOKEN";    // 服务商会话存档 获取授权存档的成员列表
-		const SET_PUBLIC_KEY       = "/cgi-bin/chatdata/set_public_key?access_token=ACCESS_TOKEN";    // 服务商会话存档 设置公钥
-		const SET_RECEIVE_CALLBACK = "/cgi-bin/chatdata/set_receive_callback?access_token=ACCESS_TOKEN";    // 服务商会话存档 设置专区接收回调事件
-		const SYNC_CALL_PROGRAM    = "/cgi-bin/chatdata/sync_call_program?access_token=ACCESS_TOKEN";    // 服务商会话存档 应用同步调用专区程序
-		const ASYNC_CALL_PROGRAM   = "/cgi-bin/chatdata/async_program_task?access_token=ACCESS_TOKEN";    // 服务商会话存档 创建专区程序调用任务
-		const ASYNC_PROGRAM_RESULT = "/cgi-bin/chatdata/async_program_result?access_token=ACCESS_TOKEN";    // 服务商会话存档 获取专区程序任务结果
+		const GET_AUTH_USER_LIST            = "/cgi-bin/chatdata/get_auth_user_list?access_token=ACCESS_TOKEN";    // 服务商会话存档 获取授权存档的成员列表
+		const SET_PUBLIC_KEY                = "/cgi-bin/chatdata/set_public_key?access_token=ACCESS_TOKEN";    // 服务商会话存档 设置公钥
+		const SET_RECEIVE_CALLBACK          = "/cgi-bin/chatdata/set_receive_callback?access_token=ACCESS_TOKEN";    // 服务商会话存档 设置专区接收回调事件
+		const SYNC_CALL_PROGRAM             = "/cgi-bin/chatdata/sync_call_program?access_token=ACCESS_TOKEN";    // 服务商会话存档 应用同步调用专区程序
+		const ASYNC_CALL_PROGRAM            = "/cgi-bin/chatdata/async_program_task?access_token=ACCESS_TOKEN";    // 服务商会话存档 创建专区程序调用任务
+		const ASYNC_PROGRAM_RESULT          = "/cgi-bin/chatdata/async_program_result?access_token=ACCESS_TOKEN";    // 服务商会话存档 获取专区程序任务结果
+		const GET_CORP_AUTH_INFO            = "/cgi-bin/chatdata/get_corp_auth_info?access_token=ACCESS_TOKEN";    // 服务商会话存档 获取数据与智能专区授权信息
+		const SET_HIDE_SENSITIVEINFO_CONFIG = "/cgi-bin/chatdata/set_hide_sensitiveinfo_config?access_token=ACCESS_TOKEN";    // 服务商会话存档 设置成员会话组件敏感信息隐藏配置
+		const GET_HIDE_SENSITIVEINFO_CONFIG = "/cgi-bin/chatdata/get_hide_sensitiveinfo_config?access_token=ACCESS_TOKEN";    // 服务商会话存档 获取成员会话组件敏感信息隐藏配置
 
 		protected function GetAccessToken ($force = false)
 		{

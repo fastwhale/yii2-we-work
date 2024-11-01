@@ -2461,4 +2461,52 @@
 
 			return $this->repJson;
 		}
+
+		/* 设置成员会话组件敏感信息隐藏配置  */
+		public function GetCorpAuthInfo ($data)
+		{
+			self::_HttpCall(self::GET_CORP_AUTH_INFO, 'POST', $data);
+
+			return $this->repJson;
+		}
+
+		/* 获取成员会话组件敏感信息隐藏配置  */
+		public function GetHideSensitiveinfoConfig ($data)
+		{
+			self::_HttpCall(self::GET_HIDE_SENSITIVEINFO_CONFIG, 'POST', $data);
+
+			return $this->repJson;
+		}
+
+		/* 设置成员会话组件敏感信息隐藏配置  */
+		public function SetHideSensitiveinfoConfig ($data)
+		{
+			self::_HttpCall(self::SET_HIDE_SENSITIVEINFO_CONFIG, 'POST', $data);
+
+			return $this->repJson;
+		}
+
+		/* 申请群ID的升级 */
+		public function ApplyToUpgradeChatid ($data)
+		{
+			self::_HttpCall(self::APPLY_TO_UPGRADE_CHATID, 'POST', $data);
+
+			return $this->repJson;
+		}
+
+		/* 群ID转换接口 */
+		public function IdconvertChatid ($data)
+		{
+			self::_HttpCall(self::IDCONVERT_CHATID, 'POST', $data);
+
+			return $this->repJson;
+		}
+
+		/* 对所有新授权企业升级群ID */
+		public function UpgradeChatidForNewCorp ($data)
+		{
+			self::_HttpCall(self::UPGRADE_CHATID_FOR_NEW_CORP, 'POST', $data);
+
+			return $this->repJson;
+		}
 	}
