@@ -154,7 +154,8 @@
 
 		/* 消息推送 */
 		/* 发送应用消息 */
-		const MESSAGE_SEND = '/cgi-bin/message/send?access_token=ACCESS_TOKEN'; // 发送应用消息 POST
+		const MESSAGE_SEND         = '/cgi-bin/message/send?access_token=ACCESS_TOKEN'; // 发送应用消息 POST
+		const UPDATE_TEMPLATE_CARD = '/cgi-bin/message/update_template_card?access_token=ACCESS_TOKEN'; // 更新模版卡片消息 POST
 
 		/* 企业发表内容到客户的朋友圈 */
 		const MESSAGE_SEND_MOMENT_TASK = '/cgi-bin/externalcontact/add_moment_task?access_token=ACCESS_TOKEN'; // 发送应用消息 POST

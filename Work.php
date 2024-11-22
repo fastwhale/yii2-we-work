@@ -2509,4 +2509,14 @@
 
 			return $this->repJson;
 		}
+
+		/* 更新模版卡片消息 */
+		public function UpdateTemplateCard ($message, &$invalidUserIdList, &$invalidPartyIdList, &$invalidTagIdList)
+		{
+			self::_HttpCall(self::UPDATE_TEMPLATE_CARD, 'POST', $message);
+
+			$this->getInvalidList($invalidUserIdList, $invalidPartyIdList, $invalidTagIdList);
+
+			return $this->repJson;
+		}
 	}
