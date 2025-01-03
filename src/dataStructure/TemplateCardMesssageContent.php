@@ -24,6 +24,12 @@
 	 * @property array  $horizontal_content_list    二级标题+文本列表，该字段可为空数组，但有数据的话需确认对应字段是否必填，列表长度不超过6
 	 * @property array  $jump_list                  跳转指引样式的列表，该字段可为空数组，但有数据的话需确认对应字段是否必填，列表长度不超过3
 	 * @property array  $card_action                整体卡片的点击跳转事件，text_notice必填本字段
+	 * @property array  $button_selection           下拉式的选择器
+	 * @property array  $button_list                按钮列表，列表长度不超过6
+	 * @property array  $sub_title_text             二级普通文本，建议不超过160个字，（支持id转译）
+	 * @property array  $image_text_area            左图右文样式，news_notice类型的卡片，card_image和image_text_area两者必填一个字段，不可都不填
+	 * @property array  $card_image                 图片样式，news_notice类型的卡片，card_image和image_text_area两者必填一个字段，不可都不填
+	 * @property array  $vertical_content_list      卡片二级垂直内容，该字段可为空数组，但有数据的话需确认对应字段是否必填，列表长度不超过4
 	 *
 	 * @package fastwhale\yii2\weWork\src\dataStructure
 	 */
@@ -51,6 +57,12 @@
 			$text->horizontal_content_list = Utils::arrayGet($arr, 'horizontal_content_list');
 			$text->jump_list               = Utils::arrayGet($arr, 'jump_list');
 			$text->card_action             = Utils::arrayGet($arr, 'card_action');
+			$text->button_selection        = Utils::arrayGet($arr, 'button_selection');
+			$text->button_list             = Utils::arrayGet($arr, 'button_list');
+			$text->sub_title_text          = Utils::arrayGet($arr, 'sub_title_text');
+			$text->image_text_area         = Utils::arrayGet($arr, 'image_text_area');
+			$text->card_image              = Utils::arrayGet($arr, 'card_image');
+			$text->vertical_content_list   = Utils::arrayGet($arr, 'vertical_content_list');
 
 			return $text;
 		}
@@ -93,6 +105,12 @@
 			Utils::setIfNotNull($content->horizontal_content_list, "horizontal_content_list", $args);
 			Utils::setIfNotNull($content->jump_list, "jump_list", $args);
 			Utils::setIfNotNull($content->card_action, "card_action", $args);
+			Utils::setIfNotNull($content->button_selection, "button_selection", $args);
+			Utils::setIfNotNull($content->button_list, "button_list", $args);
+			Utils::setIfNotNull($content->sub_title_text, "sub_title_text", $args);
+			Utils::setIfNotNull($content->image_text_area, "image_text_area", $args);
+			Utils::setIfNotNull($content->card_image, "card_image", $args);
+			Utils::setIfNotNull($content->vertical_content_list, "vertical_content_list", $args);
 
 			Utils::setIfNotNull($args, $content->msgtype, $arr);
 
