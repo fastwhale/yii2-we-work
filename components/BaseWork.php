@@ -443,6 +443,7 @@
 		const GET_CORP_AUTH_INFO            = "/cgi-bin/chatdata/get_corp_auth_info?access_token=ACCESS_TOKEN";    // 服务商会话存档 获取数据与智能专区授权信息
 		const SET_HIDE_SENSITIVEINFO_CONFIG = "/cgi-bin/chatdata/set_hide_sensitiveinfo_config?access_token=ACCESS_TOKEN";    // 服务商会话存档 设置成员会话组件敏感信息隐藏配置
 		const GET_HIDE_SENSITIVEINFO_CONFIG = "/cgi-bin/chatdata/get_hide_sensitiveinfo_config?access_token=ACCESS_TOKEN";    // 服务商会话存档 获取成员会话组件敏感信息隐藏配置
+		const CHATDATA_UPLOAD_MEDIA         = "/cgi-bin/chatdata/upload_media?access_token=ACCESS_TOKEN";    // 上传临时文件到专区
 
 		protected function GetAccessToken ($force = false)
 		{

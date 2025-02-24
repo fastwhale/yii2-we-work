@@ -2519,4 +2519,27 @@
 
 			return $this->repJson;
 		}
+
+		/* 服务商会话存档 上传临时文件到专区 */
+		public function ChatdataMediaUpload ($filePath, $type, $plus = [])
+		{
+			Utils::checkNotEmptyStr($filePath, "filePath");
+			Utils::checkNotEmptyStr($type, "type");
+
+			if (!file_exists($filePath)) {
+				throw new \QyApiError("file not exists");
+			}
+			$fileName = !empty($plus['file_name']) ? $plus['file_name'] : basename($filePath);
+			// 兼容php5.3-5.6 curl模块的上传操作
+			$args = [];
+			if (class_exists('\CURLFile')) {
+				$args = ['media' => new \CURLFile(realpath($filePath), 'application/octet-stream', $fileName)];
+			} else {
+				$args = ['media' => '@' . realpath($filePath)];
+			}
+
+			self::_HttpCall(self::CHATDATA_UPLOAD_MEDIA . '&type=' . $type, 'POST', $args, true, true);
+
+			return $this->repJson["media_id"];
+		}
 	}
