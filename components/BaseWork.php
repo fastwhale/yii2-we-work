@@ -445,6 +445,18 @@
 		const GET_HIDE_SENSITIVEINFO_CONFIG = "/cgi-bin/chatdata/get_hide_sensitiveinfo_config?access_token=ACCESS_TOKEN";    // 服务商会话存档 获取成员会话组件敏感信息隐藏配置
 		const CHATDATA_UPLOAD_MEDIA         = "/cgi-bin/chatdata/upload_media?access_token=ACCESS_TOKEN";    // 上传临时文件到专区
 
+		/* 上下游接口 */
+		const CG_LIST_APP_SHARE_INFO        = "/cgi-bin/corpgroup/corp/list_app_share_info?access_token=ACCESS_TOKEN";      // 获取应用共享信息
+		const CG_GETTOKEN                   = "/cgi-bin/corpgroup/corp/gettoken?access_token=ACCESS_TOKEN";                // 获取下级/下游企业的access_token
+		const CG_GET_CHAIN_LIST             = "/cgi-bin/corpgroup/corp/get_chain_list?access_token=ACCESS_TOKEN";          // 获取上下游列表
+		const CG_GET_CHAIN_GROUP            = "/cgi-bin/corpgroup/corp/get_chain_group?access_token=ACCESS_TOKEN";         // 获取上下游通讯录分组
+		const CG_GET_CHAIN_CORPINFO_LIST    = "/cgi-bin/corpgroup/corp/get_chain_corpinfo_list?access_token=ACCESS_TOKEN"; // 获取企业上下游通讯录分组下的企业详情列表
+		const CG_GET_CHAIN_CORPINFO         = "/cgi-bin/corpgroup/corp/get_chain_corpinfo?access_token=ACCESS_TOKEN";      // 获取企业上下游通讯录下的企业信息
+		const CG_GET_CORP_SHARED_CHAIN_LIST = "/cgi-bin/corpgroup/get_corp_shared_chain_list?access_token=ACCESS_TOKEN";   // 获取下级企业加入的上下游
+		const CG_UNIONID_TO_EXTERNAL_USERID = "/cgi-bin/corpgroup/unionid_to_external_userid?access_token=ACCESS_TOKEN";   // 通过unionid和openid查询external_userid
+
+
+
 		protected function GetAccessToken ($force = false)
 		{
 		}

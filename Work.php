@@ -2542,4 +2542,72 @@
 
 			return $this->repJson["media_id"];
 		}
+
+
+		/* 上下游接口 获取应用共享信息 */
+		public function CGListAppShareInfo ($data)
+		{
+			self::_HttpCall(self::CG_LIST_APP_SHARE_INFO, 'POST', $data);
+
+			return $this->repJson;
+		}
+
+		/* 上下游接口 获取下级/下游企业的access_token */
+		public function CGGettoken ($data)
+		{
+			self::_HttpCall(self::CG_GETTOKEN, 'POST', $data);
+
+			return $this->repJson;
+		}
+
+		/* 上下游接口 获取上下游列表 */
+		public function CGGetChainList ()
+		{
+			self::_HttpCall(self::CG_GET_CHAIN_LIST, 'GET');
+
+			return $this->repJson;
+		}
+
+		/* 上下游接口 获取上下游通讯录分组 */
+		public function CGGetChainGroup ($data)
+		{
+			self::_HttpCall(self::CG_GET_CHAIN_GROUP, 'POST', $data);
+
+			return $this->repJson;
+		}
+
+		/* 上下游接口 获取企业上下游通讯录分组下的企业详情列表 */
+		public function CGGetChainCorpinfoList ($data)
+		{
+			self::_HttpCall(self::CG_GET_CHAIN_CORPINFO_LIST, 'POST', $data);
+
+			return $this->repJson;
+		}
+
+		/* 上下游接口 获取企业上下游通讯录下的企业信息 */
+		public function CGGetChainCorpinfo ($data)
+		{
+			self::_HttpCall(self::CG_GET_CHAIN_CORPINFO, 'POST', $data);
+
+			return $this->repJson;
+		}
+
+		/* 上下游接口 获取下级企业加入的上下游 */
+		public function CGGetCorpSharedChainList ($data)
+		{
+			self::_HttpCall(self::CG_GET_CORP_SHARED_CHAIN_LIST, 'POST', $data);
+
+			return $this->repJson;
+		}
+
+		/* 上下游接口 通过unionid和openid查询external_userid */
+		public function CGUnionidToExternalUserid ($data)
+		{
+			self::_HttpCall(self::CG_UNIONID_TO_EXTERNAL_USERID, 'POST', $data);
+
+			return $this->repJson;
+		}
+
+
+
 	}
