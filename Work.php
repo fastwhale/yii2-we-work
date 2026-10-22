@@ -334,7 +334,7 @@
 			}
 		}
 
-		public function batchInvite ($userIdList = NULL, $partyIdList = NULL, $tagIdList = NULL, &$invalidUserIdList, &$invalidPartyIdList, &$invalidTagIdList)
+		public function batchInvite ($userIdList = NULL, $partyIdList = NULL, $tagIdList = NULL, &$invalidUserIdList = NULL, &$invalidPartyIdList = NULL, &$invalidTagIdList = NULL)
 		{
 			if (!Utils::notEmptyArray($userIdList) && !Utils::notEmptyArray($partyIdList) && !Utils::notEmptyArray($tagIdList)) {
 				throw new \QyApiError('input can not be all null');
