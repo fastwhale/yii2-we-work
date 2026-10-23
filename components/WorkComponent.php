@@ -2,13 +2,13 @@
 
 	namespace fastwhale\yii2\weWork\components;
 
-	use yii\base\Object;
+	use yii\base\BaseObject;
 
 	/**
 	 * Class WorkComponent
 	 * @package fastwhale\yii2\weWork\components
 	 */
-	class WorkComponent extends Object
+	class WorkComponent extends BaseObject
 	{
 		/**
 		 * @var BaseWork $work
